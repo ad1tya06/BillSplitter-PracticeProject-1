@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Bill Splitter</h2>
+
+    <!-- Bill input -->
+    <div class="bill-section">
+      <label for="billInput">Bill Amount:</label>
+      <input type="number" id="billInput" placeholder="e.g. 4500" />
+    </div>
+
+    <!-- Tip options -->
+    <div class="tip-section">
+      <p>Tip Options:</p>
+      <button id="tip10">10%</button>
+      <button id="tip20">$20</button>
+      <input type="text" id="customTip" placeholder="Custom Tip" /> <br/>
+      <small class="tip-note"> You can enter custom tip as a fixed amount (e.g. 50/50$) or percentage (e.g. 20%).</small>
+    </div>
+
+    <!-- Split options -->
+    <div class="split-section">
+      <p>Split Options:</p>
+      <button id="splitEqual" class="active">Equal</button>
+      <button id="splitConsumption">Consumption</button>
+    </div>
+
+    <!-- People section -->
+    <div class="people-section">
+  <p>People:</p>
+  <div class="people">
+    <div class="people-btn" id="addPerson">+</div>
+    <div class="people-btn" id="removePerson">-</div>
+    <span id="peopleCount">1</span>
+  </div>
+</div> 
+
+    <!-- Consumption inputs -->
+    <div id="consumptionInputs" class="consumption-inputs">
+      <input type="number" placeholder="Person 1 consumption" class="person-input" />
+    </div>
+
+    <!-- Proceed button -->
+    <button id="proceedBtn">Proceed</button>
+
+    <!-- Result -->
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

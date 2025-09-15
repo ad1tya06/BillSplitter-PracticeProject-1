@@ -1,0 +1,257 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4ff; /* light blue background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container card */
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.container h2 {
+  margin-bottom: 20px;
+  color: #007bff; /* blue heading */
+}
+
+/* Bill, Tip, Split sections */
+.bill-section,
+.tip-section,
+.split-section {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label, p {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs */
+input[type="number"] {
+  padding: 8px;
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+/* General input styling */
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+/* Highlight on focus */
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Custom Tip specifically */
+#customTip {
+  margin-top: 10px;
+}
+/* Apply box-sizing globally */
+* {
+  box-sizing: border-box;
+}
+
+/* Limit inputs to container width */
+input[type="number"],
+input[type="text"] {
+  width: 100%;        /* take full width but respect container */
+  max-width: 100%;    /* never overflow */
+  padding: 10px 12px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+/* Focus state */
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+
+/* Person consumption inputs */
+.person-input {
+  display: block;
+  margin-top: 8px;
+}
+/* Buttons */
+button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #e0e7ff; /* light blue */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #c7d7ff; /* darker hover */
+}
+
+/* Active buttons (highlighted blue) */
+.tip-section button.active,
+.split-section button.active {
+  background: #007bff;
+  color: white;
+}
+.tip-note {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* People section */
+.people-section {
+  margin: 15px 0;
+  text-align: left;
+}
+.people-section p {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.people img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.people-btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.people-btn:hover {
+  background: #0056b3; /* darker blue on hover */
+}
+
+/* Consumption inputs */
+.consumption-inputs input {
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Proceed button */
+#proceedBtn {
+  background: #28a745; /* green */
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+#consumptionInputs {
+  display: none;
+  margin-top: 10px;
+}
+
+#proceedBtn:hover {
+  background: #218838;
+}
+
+/* Result */
+.result {
+  margin-top: 20px;
+  padding: 12px;
+  background: #e9f7ef;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #155724;
+}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+    flex: 1 1 45%; /* let buttons wrap neatly */
+  }
+
+  .btn-row {
+    flex-wrap: wrap; /* stack buttons if needed */
+    gap: 10px;
+  }
+
+  input[type="number"],
+  input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 100%;       /* buttons full width */
+    margin-bottom: 10px;
+  }
+
+  .btn-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="number"],
+  input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+}
